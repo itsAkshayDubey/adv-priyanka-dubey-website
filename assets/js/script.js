@@ -83,31 +83,6 @@ scrollTopBtn.addEventListener('click', () => {
 // Contact Form Handling
 const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const phone = formData.get('phone');
-    const subject = formData.get('subject');
-    const message = formData.get('message');
-    
-    // Create email body
-    const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0ASubject: ${subject}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-    
-    // Open email client
-    window.location.href = `mailto:adv.dubeypriyanka@gmail.com?subject=${encodeURIComponent(subject)}&body=${emailBody}`;
-    
-    // Alternatively, you can integrate with a form service like Formspree or EmailJS
-    // For now, we'll show a success message
-    alert('Thank you for your message! Your email client will open to send the message.');
-    
-    // Reset form
-    contactForm.reset();
-});
-
 // Smooth scroll for all anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -204,11 +179,6 @@ phoneInput.addEventListener('blur', () => {
         phoneInput.style.borderColor = '#ef4444';
     }
 });
-
-// Console greeting
-console.log('%c⚖️ Adv. Priyanka Dubey', 'font-size: 20px; font-weight: bold; color: #164e63;');
-console.log('%cLegal Services in Chhatrapati Sambhajinagar', 'font-size: 14px; color: #475569;');
-console.log('%cContact: +91 92721 04678', 'font-size: 12px; color: #64748b;');
 
 // Set copyright year dynamically (IST timezone)
 function setCopyrightYear() {
