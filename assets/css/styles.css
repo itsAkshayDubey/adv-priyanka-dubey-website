@@ -262,7 +262,8 @@ img {
 .profile-img {
     width: 100%;
     height: auto;
-    aspect-ratio: 4/5;
+    aspect-ratio: 2/3;
+    object-position: top center;
     object-fit: cover;
     border-radius: 16px;
     box-shadow: var(--shadow-xl);
