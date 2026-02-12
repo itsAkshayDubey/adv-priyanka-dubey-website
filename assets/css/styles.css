@@ -94,7 +94,6 @@ img {
 .nav-avatar {
     width: 45px;
     height: 45px;
-    min-width: 45px;
     border-radius: 50%;
     border: 2px solid var(--primary-color);
     object-fit: cover;
